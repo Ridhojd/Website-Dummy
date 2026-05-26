@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inventory Motor Bekas — RD Motor Tangerang</title>
+  <meta name="description" content="Temukan motor bekas berkualitas di RD Motor Tangerang. Honda, Yamaha, Kawasaki tersedia dengan harga terbaik dan kondisi terinspeksi." />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏍</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/pages.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar navbar--light" id="navbar">
+    <div class="navbar__inner">
+      <a href="index.html" class="navbar__logo">
+        <span class="navbar__logo-name" style="color: var(--charcoal)">RD Motor</span>
+        <span class="navbar__logo-sub" style="color: var(--text-muted)">Tangerang</span>
+      </a>
+      <nav class="navbar__nav">
+        <a href="index.html" class="navbar__link">Home</a>
+        <a href="about.html" class="navbar__link">About</a>
+        <a href="inventory.html" class="navbar__link active">Inventory</a>
+        <a href="services.html" class="navbar__link">Services</a>
+        <a href="contact.html" class="navbar__link">Contact</a>
+      </nav>
+      <a href="https://wa.me/6281234567890" class="btn btn--primary btn--sm navbar__cta" target="_blank" rel="noopener">
+        <i class="fab fa-whatsapp"></i> WhatsApp
+      </a>
+      <button class="navbar__toggle" id="menu-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <nav class="navbar__mobile" id="mobile-menu">
+    <a href="index.html" class="navbar__mobile-link">Home</a>
+    <a href="about.html" class="navbar__mobile-link">About</a>
+    <a href="inventory.html" class="navbar__mobile-link active">Inventory</a>
+    <a href="services.html" class="navbar__mobile-link">Services</a>
+    <a href="contact.html" class="navbar__mobile-link">Contact</a>
+  </nav>
+
+  <main>
+
+    <!-- PAGE HERO -->
+    <section class="page-hero" aria-labelledby="inv-page-title">
+      <div class="container">
+        <p class="page-hero__label">Katalog Unit</p>
+        <h1 class="page-hero__title" id="inv-page-title">Inventory Motor Bekas</h1>
+        <p class="page-hero__sub">
+          Semua unit telah diinspeksi. Temukan motor yang tepat untuk Anda.
+        </p>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         INVENTORY CONTROLS
+         ============================================================ -->
+    <div class="inventory-controls" id="inv-controls" role="search" aria-label="Filter inventory">
+      <div class="container">
+        <div class="inventory-controls__inner">
+          <div class="inventory-search">
+            <i class="fas fa-search" aria-hidden="true"></i>
+            <input type="search" id="inv-search" class="form-input" 
+                   placeholder="Cari nama atau merek motor..." 
+                   aria-label="Cari motor" autocomplete="off" />
+          </div>
+          <div class="inventory-filters">
+            <select id="filter-brand" class="form-select" aria-label="Filter merek">
+              <option value="">Semua Merek</option>
+              <option value="honda">Honda</option>
+              <option value="yamaha">Yamaha</option>
+              <option value="kawasaki">Kawasaki</option>
+              <option value="suzuki">Suzuki</option>
+            </select>
+            <select id="filter-year" class="form-select" aria-label="Filter tahun">
+              <option value="">Semua Tahun</option>
+              <option value="2023">2023</option>
+              <option value="2022">2022</option>
+              <option value="2021">2021</option>
+              <option value="2020">2020</option>
+              <option value="2019">2019</option>
+              <option value="2018">2018</option>
+            </select>
+            <select id="filter-price" class="form-select" aria-label="Filter harga">
+              <option value="">Semua Harga</option>
+              <option value="0-15">Di bawah 15 Jt</option>
+              <option value="15-25">15 – 25 Jt</option>
+              <option value="25-35">25 – 35 Jt</option>
+              <option value="35+">Di atas 35 Jt</option>
+            </select>
+          </div>
+          <span class="inventory-count" id="inv-count" aria-live="polite"><span>8</span> unit tersedia</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============================================================
+         INVENTORY GRID
+         ============================================================ -->
+    <section class="section section--off-white" aria-label="Daftar unit motor">
+      <div class="container">
+        <div class="inventory-grid" id="inv-grid">
+
+          <!-- Unit 1: Honda PCX -->
+          <article class="unit-card inventory-unit-card reveal"
+                   data-name="honda pcx 160" data-brand="honda" data-year="2022" data-price="28500000">
+            <div class="unit-card__image">
+              <img src="images/units/honda-pcx.jpg" alt="Honda PCX 160 2022" loading="lazy" />
+              <span class="unit-card__badge unit-card__badge--available">Tersedia</span>
+            </div>
+            <div class="unit-card__body">
+              <p class="unit-card__brand">Honda</p>
+              <h2 class="unit-card__name">PCX 160</h2>
+              <div class="unit-card__specs">
+                <div class="unit-card__spec">
+                  <span class="unit-card__spec-label">Tahun</span>
+                  <span class="unit-card__spec-value">2022</span>
+                </div>
+                <div class="unit-card__spec">
+                  <span class="unit-card__spec-label">Kilometer</span>
+                  <span class="unit-card__spec-value">14.500 km</span>
+                </div>
+                <div class="unit-card__spec">
+                  <span class="unit-card__spec-label">Warna</span>
+                  <span class="unit-card__spec-value">Putih</span>
+                </div>
+              </div>
+              <div class="unit-card__footer">
+                <span class="unit-card__price">Rp 28,5 Jt</span>
+                <a href="unit-detail.html" class="btn btn--primary btn--sm">Detail</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Unit 2: Yamaha NMAX -->
+          <article class="unit-card inventory-unit-card reveal reveal-delay-1"
+                   data-name="yamaha nmax 155" data-brand="yamaha" data-year="2021" data-price="24000000">
+            <div class="unit-card__image">
+              <img src="images/units/yamaha-nmax.jpg" alt="Yamaha NMAX 155 2021" loading="lazy" />
+              <span class="unit-card__badge unit-card__badge--available">Tersedia</span>
+            </div>
+            <div class="unit-card__body">
+              <p class="unit-card__brand">Yamaha</p>
+              <h2 class="unit-card__name">NMAX 155</h2>
+              <div class="unit-card__specs">
+                <div class="unit-card__spec">
+                  <span class="unit-card__spec-label">Tahun</span>
+                  <span class="unit-card__spec-value">2021</span>
+                </div>
+                <div class="unit-card__spec">
+                  <span class="unit-card__spec-label">Kilometer</span>
+                  <span class="unit-card__spec-value">22.000 km</span>
+                </div>
+                <div class="unit-card__spec">
+                  <span class="unit-card__spec-label">Warna</span>
+                  <span class="unit-card__spec-value">Navy Blue</span>
+                </div>
+              </div>
+              <div class="unit-card__footer">
+                <span class="unit-card__price">Rp 24 Jt</span>
+                <a href="unit-detail.html" class="btn btn--primary btn--sm">Detail</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Unit 3: Honda Vario -->
+          <article class="unit-card inventory-unit-card reveal reveal-delay-2"
+                   data-name="honda vario 150" data-brand="honda" data-year="2020" data-price="16500000">
+            <div class="unit-card__image">
+              <img src="images/units/honda-vario.jpg" alt="Honda Vario 150 2020" loading="lazy" />
+              <span class="unit-card__badge unit-card__badge--available">Tersedia</span>
+            </div>
+            <div class="unit-card__body">
+              <p class="unit-card__brand">Honda</p>
+              <h2 class="unit-card__name">Vario 150</h2>
+              <div class="unit-card__specs">
+                <div class="unit-card__spec">
+                  <span class="unit-card__spec-label">Tahun</span>
+                  <span class="unit-card__spec-value">2020</span>
+                </div>
+                <div class="unit-card__spec">
+                  <span class="unit-card__spec-label">Kilometer</span>
+                  <span class="unit-card__spec-value">35.200 km</span>
+                </div>
+                <div class="unit-card__spec">
+                  <span class="unit-card__spec-label">Warna</span>
+                  <span class="unit-card__spec-value">Hitam Matte</span>
+                </div>
+              </div>
+              <div class="unit-card__footer">
+                <span class="unit-card__price">Rp 16,5 Jt</span>
+                <a href="unit-detail.html" class="btn btn--primary btn--sm">Detail</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Unit 4: Yamaha Aerox -->
+          <article class="unit-card inventory-unit-card reveal"
+                   data-name="yamaha aerox 155" data-brand="yamaha" data-year="2022" data-price="22000000">
+            <div class="unit-card__image">
+              <img src="images/units/yamaha-aerox.jpg" alt="Yamaha Aerox 155 2022" loading="lazy" />
+              <span class="unit-card__badge unit-card__badge--available">Tersedia</span>
+            </div>
+            <div class="unit-card__body">
+              <p class="unit-card__brand">Yamaha</p>
+              <h2 class="unit-card__name">Aerox 155</h2>
+              <div class="unit-card__specs">
+                <div class="unit-card__spec">
+                  <span class="unit-card__spec-label">Tahun</span>
+                  <span class="unit-card__spec-value">2022</span>
+                </div>
+                <div class="unit-card__spec">
+                  <span class="unit-card__spec-label">Kilometer</span>
+                  <span class="unit-card__spec-value">18.700 km</span>
+                </div>
+                <div class="unit-card__spec">
+                  <span class="unit-card__spec-label">Warna</span>
+                  <span class="unit-card__spec-value">Merah</span>
+                </div>
+              </div>
+              <div class="unit-card__footer">
+                <span class="unit-card__price">Rp 22 Jt</span>
+                <a href="unit-detail.html" class="btn btn--primary btn--sm">Detail</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Unit 5: Honda Beat -->
+          <article class="unit-card inventory-unit-card reveal reveal-delay-1"
+                   data-name="honda beat street" data-brand="honda" data-year="2021" data-price="12500000">
+            <div class="unit-card__image">
+              <img src="images/units/honda-beat.jpg" alt="Honda Beat Street 2021" loading="lazy" />
+              <span class="unit-card__badge unit-card__badge--available">Tersedia</span>
+            </div>
+            <div class="unit-card__body">
+              <p class="unit-card__brand">Honda</p>
+              <h2 class="unit-card__name">Beat Street</h2>
+              <div class="unit-card__specs">
+                <div class="unit-card__spec">
+                  <span class="unit-card__spec-label">Tahun</span>
+                  <span class="unit-card__spec-value">2021</span>
+                </div>
+                <div class="unit-card__spec">
+                  <span class="unit-card__spec-label">Kilometer</span>
+                  <span class="unit-card__spec-value">28.400 km</span>
+                </div>
+                <div class="unit-card__spec">
+                  <span class="unit-card__spec-label">Warna</span>
+                  <span class="unit-card__spec-value">Putih Abu</span>
+                </div>
+              </div>
+              <div class="unit-card__footer">
+                <span class="unit-card__price">Rp 12,5 Jt</span>
+                <a href="unit-detail.html" class="btn btn--primary btn--sm">Detail</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Unit 6: Kawasaki Ninja -->
+          <article class="unit-card inventory-unit-card reveal reveal-delay-2"
+                   data-name="kawasaki ninja 250" data-brand="kawasaki" data-year="2020" data-price="34500000">
+            <div class="unit-card__image">
+              <img src="images/units/kawasaki-ninja.jpg" alt="Kawasaki Ninja 250 2020" loading="lazy" />
+              <span class="unit-card__badge unit-card__badge--available">Tersedia</span>
+            </div>
+            <div class="unit-card__body">
+              <p class="unit-card__brand">Kawasaki</p>
+              <h2 class="unit-card__name">Ninja 250</h2>
+              <div class="unit-card__specs">
+                <div class="unit-card__spec">
+                  <span class="unit-card__spec-label">Tahun</span>
+                  <span class="unit-card__spec-value">2020</span>
+                </div>
+                <div class="unit-card__spec">
+                  <span class="unit-card__spec-label">Kilometer</span>
+                  <span class="unit-card__spec-value">31.200 km</span>
+                </div>
+                <div class="unit-card__spec">
+                  <span class="unit-card__spec-label">Warna</span>
+                  <span class="unit-card__spec-value">Lime Green</span>
+                </div>
+              </div>
+              <div class="unit-card__footer">
+                <span class="unit-card__price">Rp 34,5 Jt</span>
+                <a href="unit-detail.html" class="btn btn--primary btn--sm">Detail</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Unit 7: Honda PCX 2023 -->
+          <article class="unit-card inventory-unit-card reveal"
+                   data-name="honda pcx 160" data-brand="honda" data-year="2023" data-price="32000000">
+            <div class="unit-card__image">
+              <img src="images/units/honda-pcx.jpg" alt="Honda PCX 160 2023" loading="lazy" />
+              <span class="unit-card__badge unit-card__badge--available">Tersedia</span>
+            </div>
+            <div class="unit-card__body">
+              <p class="unit-card__brand">Honda</p>
+              <h2 class="unit-card__name">PCX 160 ABS</h2>
+              <div class="unit-card__specs">
+                <div class="unit-card__spec">
+                  <span class="unit-card__spec-label">Tahun</span>
+                  <span class="unit-card__spec-value">2023</span>
+                </div>
+                <div class="unit-card__spec">
+                  <span class="unit-card__spec-label">Kilometer</span>
+                  <span class="unit-card__spec-value">8.300 km</span>
+                </div>
+                <div class="unit-card__spec">
+                  <span class="unit-card__spec-label">Warna</span>
+                  <span class="unit-card__spec-value">Silver</span>
+                </div>
+              </div>
+              <div class="unit-card__footer">
+                <span class="unit-card__price">Rp 32 Jt</span>
+                <a href="unit-detail.html" class="btn btn--primary btn--sm">Detail</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Unit 8: Yamaha NMAX 2023 -->
+          <article class="unit-card inventory-unit-card reveal reveal-delay-1"
+                   data-name="yamaha nmax 155" data-brand="yamaha" data-year="2023" data-price="27500000">
+            <div class="unit-card__image">
+              <img src="images/units/yamaha-nmax.jpg" alt="Yamaha NMAX 155 2023" loading="lazy" />
+              <span class="unit-card__badge unit-card__badge--available">Tersedia</span>
+            </div>
+            <div class="unit-card__body">
+              <p class="unit-card__brand">Yamaha</p>
+              <h2 class="unit-card__name">NMAX 155 Connected</h2>
+              <div class="unit-card__specs">
+                <div class="unit-card__spec">
+                  <span class="unit-card__spec-label">Tahun</span>
+                  <span class="unit-card__spec-value">2023</span>
+                </div>
+                <div class="unit-card__spec">
+                  <span class="unit-card__spec-label">Kilometer</span>
+                  <span class="unit-card__spec-value">11.600 km</span>
+                </div>
+                <div class="unit-card__spec">
+                  <span class="unit-card__spec-label">Warna</span>
+                  <span class="unit-card__spec-value">Dark Gray</span>
+                </div>
+              </div>
+              <div class="unit-card__footer">
+                <span class="unit-card__price">Rp 27,5 Jt</span>
+                <a href="unit-detail.html" class="btn btn--primary btn--sm">Detail</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- Empty State -->
+        <div class="inventory-empty" id="inv-empty" aria-live="polite">
+          <i class="fas fa-motorcycle" aria-hidden="true"></i>
+          <h3 class="heading-xl" style="margin-bottom: var(--space-2);">Tidak Ada Unit Ditemukan</h3>
+          <p class="body-base text-secondary">Coba ubah filter atau kata kunci pencarian Anda.</p>
+          <button onclick="document.getElementById('inv-search').value=''; document.getElementById('filter-brand').value=''; document.getElementById('filter-year').value=''; document.getElementById('filter-price').value=''; document.querySelector('.inventory-controls__inner').dispatchEvent(new Event('reset'));" class="btn btn--outline" style="margin-top: var(--space-4);">
+            Reset Filter
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- INQUIRY BANNER -->
+    <section class="section--sm" style="background: var(--white); border-top: 1px solid var(--border);" aria-label="CTA inquiry">
+      <div class="container" style="display: flex; align-items: center; justify-content: space-between; gap: var(--space-4); flex-wrap: wrap;">
+        <div>
+          <h3 class="heading-xl" style="margin-bottom: 6px;">Tidak menemukan yang Anda cari?</h3>
+          <p class="body-sm text-secondary">Hubungi kami dan kami akan bantu carikan unit sesuai kebutuhan Anda.</p>
+        </div>
+        <a href="https://wa.me/6281234567890?text=Halo%20RD%20Motor%2C%20saya%20mencari%20unit%20tertentu" 
+           class="btn btn--whatsapp btn--lg" target="_blank" rel="noopener" id="inv-wa-btn">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Tanyakan Unit ke Kami
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <div class="footer__logo">RD Motor</div>
+          <div class="footer__logo-sub">Tangerang</div>
+          <p class="footer__desc">Dealer motor bekas terpercaya di Tangerang dengan komitmen kualitas dan pelayanan profesional.</p>
+          <div class="footer__social">
+            <a href="#" class="footer__social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="footer__social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://wa.me/6281234567890" class="footer__social-link" aria-label="WhatsApp" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i></a>
+            <a href="#" class="footer__social-link" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+          </div>
+        </div>
+        <div>
+          <h3 class="footer__col-title">Navigasi</h3>
+          <ul class="footer__links">
+            <li><a href="index.html" class="footer__link">Home</a></li>
+            <li><a href="about.html" class="footer__link">Tentang Kami</a></li>
+            <li><a href="inventory.html" class="footer__link">Inventory</a></li>
+            <li><a href="services.html" class="footer__link">Layanan</a></li>
+            <li><a href="contact.html" class="footer__link">Kontak</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="footer__col-title">Merek</h3>
+          <ul class="footer__links">
+            <li><a href="inventory.html" class="footer__link">Honda</a></li>
+            <li><a href="inventory.html" class="footer__link">Yamaha</a></li>
+            <li><a href="inventory.html" class="footer__link">Kawasaki</a></li>
+            <li><a href="inventory.html" class="footer__link">Suzuki</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="footer__col-title">Kontak</h3>
+          <div class="footer__contact-item"><i class="fas fa-location-dot footer__contact-icon"></i><span>Jl. Raya Serpong No. 45, Tangerang Selatan</span></div>
+          <div class="footer__contact-item"><i class="fab fa-whatsapp footer__contact-icon"></i><span>+62 812-3456-7890</span></div>
+          <div class="footer__contact-item"><i class="fas fa-clock footer__contact-icon"></i><span>Senin – Sabtu: 08.00 – 17.00</span></div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copy">&copy; 2025 RD Motor. All rights reserved.</p>
+        <div class="footer__bottom-links">
+          <a href="#" class="footer__bottom-link">Privacy Policy</a>
+          <a href="#" class="footer__bottom-link">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/6281234567890" class="float-wa" target="_blank" rel="noopener" aria-label="Chat WhatsApp">
+    <div class="float-wa__pulse" aria-hidden="true"></div>
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
